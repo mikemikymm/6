@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>6</title>
-  </head>
-  <body>
-    <label>请输入你的名字：</label>
-    <input type="text" id="nameInput">
-    <button onclick="showResult()">确定</button>
-    <p id="output"></p>
+<head>
+	<title>Greeting Page</title>
+	<script>
+		function showGreeting() {
+			let name = document.getElementById("name").value;
+			let greeting = document.getElementById("greeting");
 
-    <script>
-      function showResult() {
-        const name = document.getElementById("nameInput").value;
-        const dadName = "Mike";
-        const result = `我是${dadName}的儿子`;
-        document.getElementById("output").textContent = result;
-      }
-    </script>
-  </body>
+			if (name === "Mike") {
+				greeting.innerHTML = "你是Mike的乖儿子";
+			} else {
+				greeting.innerHTML = name + "是Mike的儿子";
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>请输入你的名字:</p>
+	<input type="text" id="name">
+
+	<button onclick="showGreeting()">提交</button>
+
+	<p id="greeting"></p>
+</body>
 </html>
+
