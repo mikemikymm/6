@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6</title>
+  </head>
+  <body>
+    <label>请输入你的名字：</label>
+    <input type="text" id="nameInput">
+    <button onclick="showResult()">确定</button>
+    <p id="output"></p>
+
+    <script>
+      function showResult() {
+        const name = document.getElementById("nameInput").value;
+        const dadName = "Mike";
+        const result = `我是${dadName}的儿子`;
+        document.getElementById("output").textContent = result;
+      }
+    </script>
+  </body>
+</html>
